@@ -111,3 +111,7 @@ app.delete('/api/parts/:id', (req, res) => {
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
+
+app.get('/api/test', (req, res) => {
+  res.json({ message: 'API is working' });
+});
