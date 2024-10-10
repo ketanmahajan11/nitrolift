@@ -14,11 +14,11 @@ app.use(express.json());
 const dbPath = process.env.SQLITE_DB_PATH || path.resolve(__dirname, 'parts.db');
 
 // Connect to SQLite database
-const db = new sqlite3.Database(dbPath, (err) => {
+const db = new sqlite3.Database(':memory:', (err) => {
   if (err) {
     console.error(err.message);
   } else {
-    console.log('Connected to the SQLite database.');
+    console.log('Connected to the in-memory SQLite database.');
     initializeDatabase();
   }
 });
