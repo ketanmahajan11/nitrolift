@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: 'https://yourusername.github.io'  // Replace with your GitHub Pages URL
+  origin: 'https://nitroliftsupports.onrender.com'  // Replace with your GitHub Pages URL
 }));
 app.use(express.json());
 
