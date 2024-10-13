@@ -114,11 +114,10 @@ app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
 
-const cors = require('cors');
-
-// Use this instead of the simple app.use(cors());
 app.use(cors({
-  origin: 'https://yourusername.github.io'
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 app.get('/api/test', (req, res) => {
