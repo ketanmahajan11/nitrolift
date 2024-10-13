@@ -114,11 +114,6 @@ app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
 
-app.use(cors({
-  origin: '*',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
 
 app.get('/api/test', (req, res) => {
   res.json({ message: 'API is working' });
