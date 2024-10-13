@@ -114,8 +114,9 @@ app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
 
+
 app.use(cors({
-  origin: '*',
+  origin: 'https://ketanmahajan11.github.io',  // Replace with your actual GitHub Pages URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
